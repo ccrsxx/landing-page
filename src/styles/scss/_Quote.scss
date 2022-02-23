@@ -1,0 +1,31 @@
+.quote-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-white);
+  min-height: 40vh;
+
+  .quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vmax;
+    margin: 5rem;
+
+    blockquote {
+      font-size: 3.2rem;
+      font-weight: 100;
+      font-style: italic;
+      color: var(--main-dark);
+      padding: 1rem;
+    }
+
+    figcaption {
+      margin-top: 1rem;
+      margin-left: auto;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+  }
+}

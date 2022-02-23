@@ -1,0 +1,26 @@
+.call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+
+  .call-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vmax;
+    background: #3882f6;
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    color: var(--main-white);
+
+    p {
+      color: var(--secondary-white);
+    }
+
+    button {
+      @extend .btn;
+      border: 3px solid var(--secondary-white);
+    }
+  }
+}

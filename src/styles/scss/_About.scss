@@ -1,0 +1,139 @@
+.about {
+  background-color: var(--main-dark);
+  padding: 2rem 20rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1200px) {
+    padding: 2rem 15rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 2rem 10rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 2rem 5rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    min-height: 40vh;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+
+      .hero-icon-container {
+        display: none;
+      }
+    }
+
+    .hero-icon-container {
+      width: 3rem;
+      height: 3rem;
+
+      .hero-icon {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .contact-container {
+    display: flex;
+    font-size: 1.8rem;
+    gap: 2rem;
+
+    li > a {
+      text-decoration: underline transparent;
+      text-underline-position: under;
+      transition: 200ms ease-in-out;
+      color: var(--secondary-white);
+
+      &:hover {
+        filter: brightness(1.1);
+        text-decoration-color: white;
+      }
+    }
+  }
+
+  .homepage {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .homepage-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50rem;
+
+      h1 {
+        font-size: 4.8rem;
+        font-weight: 800;
+        color: var(--main-white);
+      }
+
+      p {
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        color: var(--secondary-white);
+      }
+
+      .btn {
+        @extend .btn;
+        margin-right: auto;
+      }
+    }
+
+    .homepage-img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50rem;
+
+      .homepage-img {
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+
+    @media screen and (max-width: 1400px) {
+      gap: 5rem;
+      justify-content: space-around;
+    }
+
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 0;
+
+      .homepage-text {
+        width: 40vmax;
+        align-items: center;
+        padding: 1rem;
+
+        .btn {
+          margin: 1rem;
+        }
+      }
+
+      .homepage-img-container,
+      .homepage-img {
+        display: none;
+      }
+    }
+  }
+}
